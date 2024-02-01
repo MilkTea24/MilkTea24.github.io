@@ -6,6 +6,10 @@
 #   url: {homepage_of_author}
 # -------------------------------------
 
+milktea:
+  name: MilkTea24
+  url: https://github.com/milktea24/
+
 cotes:
   name: Cotes Chung
   twitter: cotes2020
