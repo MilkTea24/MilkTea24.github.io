@@ -51,6 +51,7 @@ export function loadImg() {
     }
   });
 
+
   // LQIPs set by the data URI or WebP will not trigger the 'load' event,
   // so manually convert the URI to the URL of a high-resolution image.
   const $lqips = $(`article img[${ATTR_DATA_LQIP}="true"]`);
