@@ -224,7 +224,7 @@ a(N)은 Ackermann function으로 모든 우주의 원자 개수를 N으로 해�
 ### 연관 문제
 
 1. [백준 1043 거짓말](https://www.acmicpc.net/problem/1043)
-2. [백준 1717 집합의 표현](https://www.acmicpc.net/problem/1043)
+2. [백준 1717 집합의 표현](https://www.acmicpc.net/problem/1717)
 2. [백준 4195 친구 네트워크](https://www.acmicpc.net/problem/4195)
 3. [알고스팟 에디터 전쟁](https://www.algospot.com/judge/problem/read/EDITORWARS)
 
