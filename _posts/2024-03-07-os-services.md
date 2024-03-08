@@ -71,9 +71,6 @@ System Call은 운영체제에서 API로 제공되면 이 함수를 실행하면
 1. 리눅스 Command Line Shell에서 mkdir 커맨드를 입력하면 mkdir 프로그램이 실행된다.
 2. mkdir 프로그램은 내부에서 mkdir System Call을 활용하여 디렉토리를 생성한다.
 
-다음의 예시도 확인할 수 있다.
-1. 
-
 이러한 System Call은 운영체제마다 명세가 달라진다.
 Windows에서는 Win32 API, UNIX 계열은 POSIX API, Java Virtual Machine은 Java API라는 System Call 명세가 존재한다.
 
