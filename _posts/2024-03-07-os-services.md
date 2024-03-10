@@ -116,4 +116,4 @@ System Call은 운영체제의 서비스를 호출하기 위해 API라는 제약
 # Reference
 2022 1학기 운영체제 수업 자료
 
-Operation System Concepts, 8th Edition. Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Wiley
+Operating System Concepts, 8th Edition. Abraham Silberschatz, Peter Baer Galvin, Greg Gagne. Wiley
