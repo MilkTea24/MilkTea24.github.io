@@ -13,18 +13,18 @@ image:
 # 요약
 - System Call은 무엇인가요?
 
-System Call은 사용자가 운영체제의 서비스를 호출하기 위해 사용해야 하는 API입니다.
-System Call은 kernel이 제공하는 운영체제의 서비스를 직접 사용자가 조작하는 일을 방지합니다.
-이를 통해 사용자는 운영체제 서비스의 세부 구현을 알 필요 없고 운영체제 서비스의 오용을 막습니다.
+System Call은 사용자 프로그램이 커널의 운영체제 서비스를 호출하기 위해 사용해야 하는 API입니다.
+System Call은 커널이 제공하는 운영체제의 서비스를 직접 사용자가 조작하는 일을 방지합니다.
+이를 통해 사용자는 운영체제 서비스의 세부 구현을 알 필요 없고 운영체제 서비스를 안전하게 사용할 수 있도록 합니다.
 
 - System Call은 어떻게 구현되나요?
 
-System Call Interface는 동적 라이브러리로 System Call의 실행을 지원합니다.
+System Call Interface는 사용자 프로그램에서 System Call의 실행을 지원합니다.
 System Call Interface는 인덱스와 System Call의 세부 구현이 매핑되어 있어 인덱스를 호출하면 System Call을 실행한 후 결과값을 반환합니다.
 
 이 때 System Call도 API, 즉 함수이므로 매개 변수를 가지는 경우가 있습니다.
 매개 변수를 전달하기 위해 여러 방법을 사용할 수 있습니다.
-대표적으로 Linux는 memory에 매개 변수 데이터를 담고 그 주소를 레지스터에 담아 전달하는 방법을 사용합니다.
+예를 들면 Linux는 메모리에 매개 변수 데이터를 담고 그 주소를 레지스터에 담아 전달하는 방법을 사용합니다.
 
 # 서론
 앞서 운영체제 개요에서 운영체제는 사용자가 편리하고 효율적으로 컴퓨터를 사용할 수 있게 한다고 하였다.
@@ -87,11 +87,15 @@ API가 어떤 식으로 구현되어 있는지 전혀 알 필요가 없다.
 
 ![img2.png](/assets/img/posts/cs/os/services/systemcall.png)
 
-![img3.png](/assets/img/posts/cs/os/services/systemcall-example.png)
-
 **System Call Interface**는 테이블에서 인덱스와 실제 System Call 구현부를 매핑한다.
 따라서 실행할 System Call의 인덱스를 입력하면 그 System Call이 실행된다.
 이 후 System Call의 실행 결과를 Caller(사용자 프로그램 등)에게 반환한다.
+
+![img3.png](/assets/img/posts/cs/os/services/systemcall-example.png)
+
+위의 예시는 Linux에서 C 프로그램이 prinf 함수를 실행할 때의 과정을 보여준다.
+여기서 standard C library가 System Call Interface로 볼 수 있다.
+prinf가 실행되면 standard C library는 write와 같은 적절한 System Call을 실행하고 System Call로 받은 결과를 적절히 가공하여 호출한 사용자 프로그램에 반환한다.
 
 ### System Call의 매개변수 전달
 이 때 System Call에 입력값을 전달해야 하는 경우도 있을 것이다.
@@ -102,6 +106,9 @@ API가 어떤 식으로 구현되어 있는지 전혀 알 필요가 없다.
 3. 매개 변수를 Stack에 넣고(push) 운영체제가 System Call을 실행할 때 가져온다(pop).
 
 ### System Call의 종류
+아래의 분류에 어떤 운영체제 서비스를 호출한다는 설명은 사실 명확하게 선을 그어 분리할 수는 없다.
+따라서 System Call이 커널의 운영체제 서비스를 호출한다는 점에 주목하면 된다.
+
 - Process Control : Program Execution, Resource Allocation 등의 운영체제 서비스를 호출한다.
 - File Management : File-system Manipulation 등의 운영체제 서비스를 호출한다.
 - Device Management : I/O Operations 등의 운영체제 서비스를 호출한다.
@@ -111,7 +118,7 @@ API가 어떤 식으로 구현되어 있는지 전혀 알 필요가 없다.
 
 # 결론
 System Call은 운영체제의 서비스를 호출하기 위해 API라는 제약 사항을 두고 사용자가 세부 구현을 알 필요없이 적절하게 사용할 수 있도록 도와준다. 
-다음 포스트에서 System Service라는, 운영체제의 서비스와 비슷하면서도 약간 다른 개념을 확인해 보도록 하자.
+다음 포스트에서 커널이 제공하는 운영체제 서비스보다 일반적인 개념인 System Service에 대해 알아보자.
 
 # Reference
 2022 1학기 운영체제 수업 자료
