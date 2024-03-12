@@ -8,7 +8,7 @@ pin: true
 math: true
 mermaid: true
 image:
-  path: /assets/img/posts/cs/os/services/thumbnail.png
+  path: /assets/img/posts/cs/os/process/thumbnail.png
 ---
 # 요약
 - 프로세스는 무엇인가요?
