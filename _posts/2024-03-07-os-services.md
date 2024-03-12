@@ -117,8 +117,7 @@ prinf가 실행되면 standard C library는 write와 같은 적절한 System Cal
 - Protection : Protection and Security 등의 운영체제 서비스를 호출한다.
 
 # 결론
-System Call은 운영체제의 서비스를 호출하기 위해 API라는 제약 사항을 두고 사용자가 세부 구현을 알 필요없이 적절하게 사용할 수 있도록 도와준다. 
-다음 포스트에서 커널이 제공하는 운영체제 서비스보다 일반적인 개념인 System Service에 대해 알아보자.
+System Call은 운영체제의 서비스를 호출하기 위해 API라는 제약 사항을 두고 사용자가 세부 구현을 알 필요없이 적절하게 사용할 수 있도록 도와준다.
 
 # Reference
 2022 1학기 운영체제 수업 자료
