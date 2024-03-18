@@ -39,7 +39,7 @@ G\` = (V\`, E\`)에서 V\`는 V의 부분 집합, E\`는 E의 부분 집합이�
 
 ![img1.png](/assets/img/posts/algorithm/mst/spanning-tree.png)
 
-(B)의 그래프는 (C)와 같이 여러 개의 신장 트리를 가질 수 있다.
+(B)와 같이 하나의 그래프는 여러 개의 신장 트리를 가질 수 있다.
 
 ## 최소 신장 트리(Minimum Spanning Tree)
 **최소 신장 트리의 정의**는 다음과 같다.
