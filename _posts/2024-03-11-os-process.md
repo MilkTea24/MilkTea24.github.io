@@ -1,5 +1,5 @@
 ---
-title: 프로세스(Process)
+title: 운영체제 - 프로세스(Process)
 author: milktea
 date: 2024-03-11 14:00:00 +0800
 categories: [CS]

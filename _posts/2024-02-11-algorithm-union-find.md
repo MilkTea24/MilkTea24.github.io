@@ -1,5 +1,5 @@
 ---
-title: 유니온 파인드를 알아보자.
+title: 알고리즘 - 유니온 파인드를 알아보자.
 author: milktea
 date: 2024-02-11 03:00:00 +0800
 categories: [Algorithm]

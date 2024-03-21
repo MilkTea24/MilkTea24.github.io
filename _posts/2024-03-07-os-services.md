@@ -1,5 +1,5 @@
 ---
-title: 운영체제 서비스 - System Call
+title: 운영체제 - System Call
 author: milktea
 date: 2024-03-08 14:00:00 +0800
 categories: [CS]
