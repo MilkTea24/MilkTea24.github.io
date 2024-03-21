@@ -1,5 +1,5 @@
 ---
-title: 알고리즘 - Knapsack Problem을 알아보자.
+title: 알고리즘(Java) - Knapsack Problem을 알아보자.
 author: milktea
 date: 2024-03-03 13:00:00 +0800
 categories: [Algorithm]

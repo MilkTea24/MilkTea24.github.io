@@ -1,5 +1,5 @@
 ---
-title: 알고리즘 - 프림 알고리즘을 알아보자.
+title: 알고리즘(Java) - 프림 알고리즘을 알아보자.
 author: milktea
 date: 2024-03-18 05:00:00 +0800
 categories: [Algorithm]

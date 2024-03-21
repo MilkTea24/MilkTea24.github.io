@@ -1,5 +1,5 @@
 ---
-title: 알고리즘 - LCS(Longest Common Subsequence) 문제를 알아보자.
+title: 알고리즘(Java) - LCS(Longest Common Subsequence) 문제를 알아보자.
 author: milktea
 date: 2024-02-17 11:00:00 +0800
 categories: [Algorithm]
