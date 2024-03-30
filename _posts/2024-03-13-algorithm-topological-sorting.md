@@ -1,5 +1,5 @@
 ---
-title: 위상 정렬을 알아보자.
+title: 알고리즘(Java) - 위상 정렬을 알아보자.
 author: milktea
 date: 2024-03-13 03:00:00 +0800
 categories: [Algorithm]
