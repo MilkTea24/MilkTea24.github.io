@@ -2,8 +2,8 @@
 title: 운영체제 - 프로세스(Process)의 연산
 author: milktea
 date: 2024-03-16 10:00:00 +0800
-categories: [CS]
-tags: [OS]
+categories: [Operating System]
+tags: [Process]
 pin: true
 math: true
 mermaid: true

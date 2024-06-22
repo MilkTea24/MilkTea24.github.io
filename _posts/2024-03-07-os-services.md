@@ -2,8 +2,8 @@
 title: 운영체제 - System Call
 author: milktea
 date: 2024-03-08 14:00:00 +0800
-categories: [CS]
-tags: [OS]
+categories: [Operating System]
+tags: [SystemCall]
 pin: true
 math: true
 mermaid: true

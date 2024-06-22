@@ -2,7 +2,7 @@
 title: 리팩토링을 하는 이유는 무엇일까?
 author: milktea
 date: 2024-06-22 04:00:00 +0800
-categories: [CS]
+categories: [Software Engineering]
 tags: [Refactoring]
 pin: true
 math: true
