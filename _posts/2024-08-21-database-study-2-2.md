@@ -96,7 +96,9 @@ InnoDB에서 이 키워드는 RESTRICT와 동일하게 삭제, 변경이 일어�
 
 ### 1
 [https://dev.mysql.com/doc/refman/8.4/en/create-table-foreign-keys.html](https://dev.mysql.com/doc/refman/8.4/en/create-table-foreign-keys.html)
+
 [https://velog.io/@heypop/2023.10.22-Soft-Delete-Hard-Delete](https://velog.io/@heypop/2023.10.22-Soft-Delete-Hard-Delete)
+
 [https://stackoverflow.com/questions/21175228/sql-database-best-practices-use-of-archive-tables](https://stackoverflow.com/questions/21175228/sql-database-best-practices-use-of-archive-tables)
 
 
