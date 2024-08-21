@@ -1,9 +1,9 @@
 ---
 title: 데이터베이스 스터디 2주차 - SQL의 정의 및 특성
 author: milktea
-date: 2024-08-15 10:00:00 +0800
+date: 2024-08-20 10:00:00 +0800
 categories: [Database]
-tags: [Schema, DBMS]
+tags: [SQL]
 pin: true
 math: true
 mermaid: true
