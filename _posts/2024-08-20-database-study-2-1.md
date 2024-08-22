@@ -49,6 +49,7 @@ Java와 C는 이를 수행할 수 있기 때문에 튜링 완전 언어이고 SQ
 SQL이 튜링 완전하지 않은 방식을 택함으로써 얻는 장점도 있다.
 무한 루프가 없으므로 안정성 면에서 유리하며 선언적 특성을 채택하여 간결하고 직관적으로 사용할 수 있다.
 
+---
 # 2. SQL 실행 과정
 세부 구현은 다를 수 있지만 많은 RDBMS는 MySQL과 비슷한 SQL 처리 과정을 거친다.
 MySQL SQL 처리 과정은 다음과 같다.
@@ -83,6 +84,7 @@ MySQL SQL 처리 과정은 다음과 같다.
 
   MySQL Server는 Query의 결과를 생성하고 Client에 데이터를 전달한다.
 
+---
 # 3. DML
 데이터 조작어(Data Manipulation Language)의 약자로 데이터베이스에 저장된 데이터를 조회, 삽입, 수정, 삭제하는데 사용되는 SQL 명령어 집합이다.
 `SELECT`는 조회, `INSERT`는 삽입, `UPDATE`는 수정, `DELETE`는 테이블의 데이터를 삭제할 때 사용된다.
@@ -98,6 +100,7 @@ UPDATE Student SET total_grade = 4.0 WHERE name = 'Kim';
 DELETE FROM Student WHERE name = 'Lee';
 ```
 
+---
 # 4. DDL
 데이터 정의어(Data Definition Language)의 약자로 테이블, 인덱스 등 데이터베이스 객체의 구조를 정의하고 관리하는 명령어 집합이다.
 `CREATE`는 데이터베이스 객체를 생성, `SHOW`는 데이터베이스 객체의 정보 확인, `ALTER`는 데이터베이스 객체의 수정, `DROP`/`TRUNCATE`는 데이터베이스 객체를 삭제할 때 사용된다.
@@ -118,6 +121,7 @@ DROP TABLE STUDENT;
 TRUNCATE TABLE STUDENT;
 ```
 
+---
 # 5. DCL
 데이터 제어어(Data Control Language)의 약자로 데이터의 접근과 사용을 제어하는데 사용되는 명령어 집합이다.
 주로 데이터베이스 시스템의 보안과 관련된 작업을 수행하며 사용자에게 권한을 부여하거나 취소하는 데 사용한다.
@@ -135,6 +139,7 @@ REVOKE ALL PRIVILEGES FROM Student To 'admin'@'host';
 트랜잭션 제어어(Transaction Control Language)의 약자로 트랜잭션의 시작, 종료, 제어를 위해 사용되는 명령어 집합이다.
 `START TRANSACTION`으로 트랜잭션을 시작할 수 있고 `COMMIT`은 트랜잭션을 커밋할 때, `ROLLBACK`은 트랜잭션을 취소할 때, `SAVEPOINT`는 트랜잭션 내 특정 지점을 저장할 때 사용한다.
 
+---
 # Reference
 홍봉희 편저, 데이터베이스 SQL 프로그래밍 'MySQL 실습', 부산대학교출판문화원
 
