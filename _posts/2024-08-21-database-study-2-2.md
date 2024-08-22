@@ -25,7 +25,7 @@ MySQL에서는 `RESTRICT`, `CASCADE`, `SET NULL`, `NO ACTION` 옵션이 있다.
 SET DEFAULT 옵션은 SQL 표준에는 존재하지만 InnoDB와 NDB 스토리지 엔진에서 지원하지 않는다.
 MySQL은 별다른 외래키 제약 조건을 지정하지 않으면 `RESTRICT`나 `NO ACTION`을 적용한다. 
 
-### RESTRICT
+### 1) RESTRICT
 ```sql
 ALTER TABLE review_images
 ADD CONSTRAINT fk_review_images
@@ -37,7 +37,7 @@ ON UPDATE RESTRICT;
 부모 테이블에 있는 데이터의 삭제나 변경을 막는다.
 이 경우 부모 테이블을 참조하는 데이터를 모두 삭제해야 부모 테이블의 데이터를 삭제할 수 있다.
 
-### CASCADE
+### 2) CASCADE
 ```sql
 ALTER TABLE review_images
 ADD CONSTRAINT fk_review_images
@@ -52,7 +52,7 @@ ON UPDATE CASCADE;
 만약 두 테이블이 서로를 참조하는 관계라면 양쪽 모두에서 `ON DELETE CASCADE` 또는 `ON UPDATE CASCADE`를 설정해야만 올바르게 작동한다.
 그렇지 않으면 CASCADE 작업이 실패하게 된다. 
 
-### SET NULL
+### 3) SET NULL
 ```sql
 ALTER TABLE review_images
 ADD CONSTRAINT fk_review_images
@@ -64,7 +64,7 @@ ON UPDATE SET NULL;
 부모 테이블에서 행의 삭제나 변경이 일어날 때 자식 테이블의 외래키 값을 NULL로 변경한다.
 **SET NULL 외래 키 제약 조건이 정상적으로 적용되기 위해서는 외래키에 NOT NULL을 선언하면 안된다.**
 
-### NO ACTION
+### 4) NO ACTION
 SQL 표준에서 존재하는 키워드이다.
 InnoDB에서 이 키워드는 RESTRICT와 동일하게 삭제, 변경이 일어날 때 즉각적으로 무결성을 검사한다.
 하지만 NDB 스토리지 엔진에서는 **외래 키 무결성 검사가 부모 테이블에서 삭제나 업데이트 시점이 아닌, 커밋할 때까지 지연된다.**
@@ -88,9 +88,9 @@ InnoDB에서 이 키워드는 RESTRICT와 동일하게 삭제, 변경이 일어�
 결론적으로, 참조 무결성을 충족하기 위해 SOFT DELETE도 고려할 수 있으나 불필요한 리소스를 잡아먹고 성능이 저하될 수 있음을 인지해야 한다.
 중요한 데이터이거나 일관성이 중요한 데이터일 경우 SOFT DELETE를, 데이터의 수가 아주 많은 경우 완전 삭제를 고려할 수 있다.
 
-이 때 삭제한 데이터만을 보관하는 **Archiving Table**을 도입하여 성능 저하 문제를 해결하지만 추가적인 아카이빙 작업이 필요하다.
+이 때 삭제한 데이터만을 보관하는 **Archiving Table**을 도입하여 성능 저하 문제를 해결할 수 있지만 추가적인 아카이빙 작업이 필요하다는 단점도 있다.
 
-
+---
 # Reference
 홍봉희 편저, 데이터베이스 SQL 프로그래밍 'MySQL 실습', 부산대학교출판문화원
 
