@@ -3,7 +3,7 @@ title: 데이터베이스 스터디 2주차 - SELECT와 응용(FOR UPDATE, GROUP
 author: milktea
 date: 2024-08-21 14:00:00 +0800
 categories: [Database]
-tags: [Integrity]
+tags: [SQL]
 pin: true
 math: true
 mermaid: true

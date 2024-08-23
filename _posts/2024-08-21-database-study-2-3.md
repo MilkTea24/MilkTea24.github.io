@@ -3,7 +3,7 @@ title: 데이터베이스 스터디 2주차 - 뷰
 author: milktea
 date: 2024-08-21 10:00:00 +0800
 categories: [Database]
-tags: [Integrity]
+tags: [View, Integrity]
 pin: true
 math: true
 mermaid: true
