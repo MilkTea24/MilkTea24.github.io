@@ -21,13 +21,13 @@ mermaid: true
 다음과 같이 서브 쿼리를 활용할 수 있다.
 
 ```sql
-# 주문 테이블에서 주문금액이 평균 이상만 출력
+-- 주문 테이블에서 주문금액이 평균 이상만 출력
 SELECT * FROM orders WHERE total_amount > (SELECT AVG(total_amount) FROM orders);
 
-# 2번 구매자가 주문한 금액들 중 하나라도 일치하는 금액을 가진 튜플들을 반환
+-- 2번 구매자가 주문한 금액들 중 하나라도 일치하는 금액을 가진 튜플들을 반환
 SELECT * FROM orders WHERE total_amount = ANY (SELECT total_amount FROM orders WHERE customer_id = 2);
 
-# 2번 구매자가 주문한 모든 금액들보다 큰 주문 금액인 튜플들만 반환
+-- 2번 구매자가 주문한 모든 금액들보다 큰 주문 금액인 튜플들만 반환
 SELECT * FROM orders WHERE total_amount > ALL (SELECT total_amount FROM orders WHERE customer_id = 2);
 ```
 
@@ -43,7 +43,7 @@ SELECT 문에서도 서브 쿼리가 올 수 있다.
 오직 **하나의 레코드만 리턴**할 수 있다.
 
 ```sql
-# 조인 없이 서브 쿼리를 사용하여 username을 출력
+-- 조인 없이 서브 쿼리를 사용하여 username을 출력
 SELECT orders.total_amount, (SELECT username FROM customers WHERE orders.customer_id = customers.customer_id) FROM orders; 
 ```
 
