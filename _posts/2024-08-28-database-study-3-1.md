@@ -4,7 +4,7 @@ title: 데이터베이스 스터디 3주차 - 인덱스 기본 동작 원리와 
 author: milktea
 date: 2024-08-28 10:00:00 +0800
 categories: [Database]
-tags: [SQL]
+tags: [Index]
 pin: true
 math: true
 mermaid: true
