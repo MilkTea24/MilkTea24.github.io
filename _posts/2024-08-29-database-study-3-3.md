@@ -4,7 +4,7 @@ title: 데이터베이스 스터디 3주차 - 쿼리 실행 계획과 힌트
 author: milktea
 date: 2024-08-29 08:00:00 +0800
 categories: [Database]
-tags: [SQL]
+tags: [ExecutionPlan]
 pin: true
 math: true
 mermaid: true
