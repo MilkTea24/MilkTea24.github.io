@@ -34,7 +34,7 @@ mermaid: true
 5.7 이전에는 인덱스된 컬럼의 유니크한 값의 개수 정도만 가지고 실제 분포는 알지 못했다.
 하지만 8.0 버전으로 업그레이드 되면서 컬럼의 데이터 분포를 참조할 수 있는 히스토그램 정보를 활용할 수 있다.
 
-```mysql
+```sql
 -- 히스토그램 분석
 ANALYZE TABLE employees UPDATE HISTOGRAM ON gender, hire_date;
 
@@ -49,7 +49,7 @@ AND TABLE_NAME='employees';
 
 ## 실행 계획 확인
 `EXPLAIN` 키워드를 사용하여 실행 계획을 확인할 수 있다.
-```mysql
+```sql
 EXPLAIN
 SELECT *
 FROM employees e
@@ -87,7 +87,7 @@ A 테이블이 먼저 조회된다면 5000만 번을 반복하여 B 테이블을
 `IGNORE INDEX`는 강제로 특정 인덱스를 사용하지 못하게 한다.
 사용자가 터무니 없는 인덱스 힌트를 지정했다면 MySQL은 해당 힌트를 무시한다.
 
-```mysql
+```sql
 SELECT * FROM employees USE INDEX(primary) WHERE emp_no=10001;
 
 SELECT * FROM employees IGNORE INDEX(primary) WHERE emp_no=10001;
@@ -104,7 +104,7 @@ MySQL 8.0 기준으로 아주 다양한 힌트가 있으며 영향 범위에 따
 
 쿼리의 최대 실행 시간을 밀리초 단위로 설정하여 지정된 시간을 초과하면 쿼리를 실패하게 만들 수 있다.
 
-```mysql
+```sql
 SELECT /*+ MAX_EXECUTION_TIME(500) */ *
 FROM employees
 ORDER BY last_name LIMIT 1;
@@ -115,7 +115,7 @@ ORDER BY last_name LIMIT 1;
 SET_VAR 힌트는 일시적으로 시스템 변수를 변경하여 쿼리의 실행 계획을 변경할 수도 있다.
 예를 들어 대용량 처리 쿼리일 때 버퍼의 크기를 일시적을 증가시켜 처리 속도를 향상할 수 있다.
 
-```mysql
+```sql
 SELECT /*+ SET_VAR(join_buffer_size = 8388608) */ *
 FROM employees e
 JOIN departments d ON e.dept_no = d.dept_no
@@ -137,7 +137,7 @@ WHERE e.hire_date > '2000-01-01';
 
 MySQL 옵티마이저가 유니크한 값의 개수를 제대로 분석하지 못해 비효율적인 인덱스 스킵 스캔을 선택하면 `NO_SKIP_SCAN` 옵티마이저 힌트를 이용하여 인덱스 스킵 스캔을 사용하지 않게 할 수 있다.
 
-```mysql
+```sql
 SELECT /*+ NO_SKIP_SCAN(employees ix_gender_birthdate) */ gender, birth_date
 FROM employees
 WHERE birth_date >= '1965-02-01';
