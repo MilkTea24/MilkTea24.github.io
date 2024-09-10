@@ -2,7 +2,7 @@
 title: 데이터베이스 스터디 5주차 - DB 세션
 
 author: milktea
-date: 2024-09-02 14:00:00 +0800
+date: 2024-09-09 14:00:00 +0800
 categories: [Database]
 tags: [Session]
 pin: true
@@ -27,7 +27,7 @@ MySQL 기준으로 세션과 커넥션에 대해 알아보겠다.
 
 MySQL 서버는 프로세스 기반이 아닌 스레드 기반으로 작동하며 크게 포그라운드와 백그라운드 스레드로 구분할 수 있다.
 
-![img.png](img.png)
+![img.png](/assets/img/posts/database/study-5-1/img.png)
 
 **사용자와 MySQL 서버는 포그라운드 스레드를 통해 커넥션을 구축**한다.
 이 포그라운드 스레드는 각 사용자가 요청하는 쿼리 문장을 처리한다.
@@ -37,7 +37,7 @@ MySQL 서버는 프로세스 기반이 아닌 스레드 기반으로 작동하�
 
 ### 세션
 
-![img_1.png](img_1.png)
+![img_1.png](/assets/img/posts/database/study-5-1/img_1.png)
 
 MySQL에서 사용되는 메모리 영역은 크게 글로벌 메모리 영역과 로컬 메모리 영역으로 구분할 수 있다.
 글로벌 메모리 영역은 MySQL 전체 서버를 유지하기 위한 데이터를 저장하고 있다.
