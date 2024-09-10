@@ -2,7 +2,7 @@
 title: 데이터베이스 스터디 4주차 - 정규화
 
 author: milktea
-date: 2024-09-02 14:00:00 +0800
+date: 2024-09-03 14:00:00 +0800
 categories: [Database]
 tags: [NormalForm]
 pin: true
