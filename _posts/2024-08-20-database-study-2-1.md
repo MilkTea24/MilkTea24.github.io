@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - SQL의 정의 및 특성
+title: DB - SQL의 정의 및 특성
 author: milktea
 date: 2024-08-20 10:00:00 +0800
 categories: [Database]
@@ -8,6 +8,9 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
 
 # 1. SQL이란?
 SQL은 구조화 질의어(Structured Query Language)의 약자로 데이터베이스의 데이터를 조작하고 검색할 수 있는 언어이다.

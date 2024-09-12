@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - 뷰
+title: DB - 뷰
 author: milktea
 date: 2024-08-21 10:00:00 +0800
 categories: [Database]
@@ -8,6 +8,9 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
 
 # 1. 뷰(View)
 뷰를 사용하는 가장 큰 이유는 **논리적 데이터 독립성**을 지원하기 때문이다.

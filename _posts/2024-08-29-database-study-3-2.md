@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 3주차 - 인덱스 스캔 방식과 클러스터링 인덱스
+title: DB - 인덱스 스캔 방식과 클러스터링 인덱스
 
 author: milktea
 date: 2024-08-29 08:00:00 +0800
@@ -9,6 +9,10 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 3주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
 # 1. B-Tree 인덱스의 스캔 방식 
 
 ## 1) 인덱스 레인지 스캔(Index Range Scan)

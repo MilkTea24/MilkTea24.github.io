@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - SELECT와 응용(FOR UPDATE, GROUP BY, ORDER BY)
+title: DB - SELECT와 응용(FOR UPDATE, GROUP BY, ORDER BY)
 author: milktea
 date: 2024-08-21 14:00:00 +0800
 categories: [Database]
@@ -8,6 +8,9 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
 
 # 1. SELECT 절 처리 순서
 

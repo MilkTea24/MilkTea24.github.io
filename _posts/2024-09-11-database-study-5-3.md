@@ -1,14 +1,19 @@
 ---
-title: 데이터베이스 스터디 5주차 - 트랜잭션 잠금 수준
+title: DB - 트랜잭션 잠금 수준
 
 author: milktea
-date: 2024-09-10 03:00:00 +0800
+date: 2024-09-12 02:00:00 +0800
 categories: [Database]
 tags: [Transaction]
 pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 5주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
+
 # 1. 트랜잭션 격리 수준
 
 여러 트랜잭션이 동시에 처리될 때 특정 트랜잭션이 다른 트랜잭션에서 변경하거나 조회하는 데이터를 볼 수 있게 허용할지 말지를 결정한다.

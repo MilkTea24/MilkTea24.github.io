@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - 서브 쿼리, DISTINCT, 페이징
+title: DB - 서브 쿼리, DISTINCT, 페이징
 author: milktea
 date: 2024-08-23 10:00:00 +0800
 categories: [Database]
@@ -8,6 +8,10 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
 # 1. 서브 쿼리(SubQuery)
 서브쿼리란 다른 쿼리 내부에 포함되어 있는 SELECT 문을 의미한다.
 다른 쿼리의 내부에 포함되어 있어 메인 쿼리의 조건을 결정한다.
