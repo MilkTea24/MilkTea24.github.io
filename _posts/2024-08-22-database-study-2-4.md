@@ -214,11 +214,6 @@ LIMIT
 하나의 인덱스 레코드를 잠근다. 
 레코드가 잠겼을 때 다른 트랜잭션은 이 레코드의 삽입, 수정, 삭제가 제한된다.
 
-```sql
-START TRANSACTION;
-
-SELECT * FROM customer WHERE customer_id = 1 FOR UPDATE;
-```
 
 ### 2) Gap Locks
 
