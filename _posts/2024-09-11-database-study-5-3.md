@@ -30,7 +30,7 @@ Oracle은 주로 READ COMITTED 수준을 많이 사용하며 MySQL은 REPEATABLE
 
 READ UNCOMMITTED 격리 수준에서는 각 트랜잭션에서의 변경 내용이 커밋이나 롤백 여부에 상관없이 다른 트랜잭션에서 보인다.
 
-![img.png](../assets/img/posts/database/study-5-3/img.png)
+![img.png](/assets/img/posts/database/study-5-3/img.png)
 
 위 상황에서 사용자 A가 INSERT(Lara)를 롤백하면 문제가 발생한다.
 데이터베이스에서는 반영이 되지 않았지만 사용자 B의 입장에서는 Lara가 정상적인 사원이라 가정하고 계속 처리하게 된다.
@@ -46,7 +46,7 @@ B가 트랜잭션 종료 후 다음 트랜잭션에서 Lara를 조회할 때 Lar
 READ COMMITED 격리 수준에서는 각 트랜잭션이 커밋한 내용만 다른 트랜잭션이 확인할 수 있다.
 따라서 READ UNCOMMITTED 격리 수준에서 등장하는 DIRTY READ가 나타나지 않는다.
 
-![img_1.png](../assets/img/posts/database/study-5-3/img_1.png)
+![img_1.png](/assets/img/posts/database/study-5-3/img_1.png)
 
 사용자 A가 이름을 Lara에서 Toto로 변경하면 테이블에는 ToTo로 변경된다.
 하지만 Lara의 정보는 제거되지 않고 **언두 로그(Undo Log)**라는 별도의 공간에 기록된다.
@@ -59,7 +59,7 @@ READ COMMITED 격리 수준에서는 각 트랜잭션이 커밋한 내용만 다
 이렇게 트랜잭션이 커밋, 롤백되기 전까지 다른 트랜잭션이 변경된 값을 참조하지 못하게 함으로써 DIRTY READ 문제를 해결할 수 있다.
 하지만 동일한 데이터를 두번 읽는 상황에서 여전히 데이터가 나타났다 사라지는 **NON-REPEATABLE READ**가 발생할 수 있다.
 
-![img_2.png](../assets/img/posts/database/study-5-3/img_2.png)
+![img_2.png](/assets/img/posts/database/study-5-3/img_2.png)
 
 1. B가 트랜잭션을 실행해서 emp_no 500000을 조회하여 Lara 값을 얻는다.(트랜잭션 종료하지 않는다.)
 2. A가 emp_no 500000의 first_name을 Toto로 변경하여 커밋한다.
@@ -77,7 +77,7 @@ READ COMMITTED와 비슷하게 언두 로그에 이전 버전의 데이터를 �
 모든 트랜잭션은 생성된 순서에 따라 트랜잭션 ID가 존재한다.
 **READ COMMITTED는 가장 최근에 커밋된 데이터를 가져오지만 REPEATABLE READ는 자신(트랜잭션)의 생성 시점 이후의 변경 사항은 읽어오지 않는다.**
 
-![img_3.png](../assets/img/posts/database/study-5-3/img_3.png)
+![img_3.png](/assets/img/posts/database/study-5-3/img_3.png)
 
 REPEATABLE READ는 먼저 레코드의 트랜잭션 ID 값을 읽은 후 어떤 값을 가져올 지 판단한다.
   - 레코드의 트랜잭션 ID 값이 나(트랜잭션)의 트랜잭션 값보다 뒤라면 테이블이 아닌 언두 로그를 참조한다.
@@ -91,7 +91,7 @@ REPEATABLE READ는 먼저 레코드의 트랜잭션 ID 값을 읽은 후 어떤 
 
 이 REPEATABLE READ는 변경 사항에 대한 데이터 불일치는 해결할 수 있지만 **데이터 생성으로 발생하는 데이터 불일치는 해결할 수 없다.**
 
-![img_4.png](../assets/img/posts/database/study-5-3/img_4.png)
+![img_4.png](/assets/img/posts/database/study-5-3/img_4.png)
 
 하지만 이 그림을 보고 의문이 들었다.
 **새로 추가된 데이터는 나(트랜잭션)의 번호보다 뒤니까 삽입된 레코드 또한 트랜잭션 ID를 읽고 가져오지 않으면 팬텀 읽기는 해결되지 않을까?**
