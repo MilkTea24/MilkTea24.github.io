@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - 참조 무결성과 MySQL 외래키 제약 조건
+title: DB - 참조 무결성과 MySQL 외래키 제약 조건
 author: milktea
 date: 2024-08-21 10:00:00 +0800
 categories: [Database]
@@ -8,6 +8,9 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
 
 # 1. 참조 무결성
 타 테이블과 연관된 데이터가 입력, 수정, 삭제 시에도 데이터 간에 정확한 참조 관계를 유지시킨다.

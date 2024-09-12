@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 3주차 - 인덱스 기본 동작 원리와 설정 기준
+title: DB - 인덱스 기본 동작 원리와 설정 기준
 
 author: milktea
 date: 2024-08-28 10:00:00 +0800
@@ -9,6 +9,10 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 3주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
 # 1. 랜덤 I/O와 순차 I/O
 
 ## 하드 디스크에서 랜덤 I/O와 순차 I/O

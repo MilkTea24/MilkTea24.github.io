@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 4주차 - 함수 종속성
+title: DB - 함수 종속성
 
 author: milktea
 date: 2024-09-02 14:00:00 +0800
@@ -9,6 +9,10 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 4주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
 # 1. 함수 종속성(Functional Dependency)
 
 정의는 다음과 같다.

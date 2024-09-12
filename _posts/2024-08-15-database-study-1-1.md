@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 1주차 - DB의 개념, 스키마
+title: DB - DB의 개념, 스키마
 author: milktea
 date: 2024-08-15 10:00:00 +0800
 categories: [Database]
@@ -8,6 +8,9 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 1주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
 
 # 1. 파일 시스템 vs 데이터 베이스
 데이터베이스와 파일 시스템 모두 데이터를 영속적으로 저장하기 위한 시스템인 점에서 공통점을 가진다.

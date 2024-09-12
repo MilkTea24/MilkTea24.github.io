@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 2주차 - 조인
+title: DB - 조인
 author: milktea
 date: 2024-08-22 12:00:00 +0800
 categories: [Database]
@@ -8,6 +8,10 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 2주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
 # 1. Join
 관계 대수에서 조인은 Cross Product한 결과에 여러 조건을 추가한 것이다.
 Cross Product한 결과에 조건에 맞는 결과만 Selection하거나 Projection 한다.

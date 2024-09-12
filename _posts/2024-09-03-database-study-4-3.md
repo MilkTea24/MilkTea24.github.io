@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스터디 4주차 - 정규화
+title: DB - 정규화
 
 author: milktea
 date: 2024-09-03 14:00:00 +0800
@@ -9,6 +9,11 @@ pin: true
 math: true
 mermaid: true
 ---
+
+> 데이터베이스 스터디 4주차에서 학습하고 정리한 내용입니다.
+{: .prompt-info }
+
+
 # 1. 정규화(Normalization)
 
 정규화는 데이터의 중복을 제거하거나 최소화하고 데이터 종속이 논리적으로 표현되도록 데이터를 재구성하는 과정이다.
