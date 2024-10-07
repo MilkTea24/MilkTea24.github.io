@@ -22,7 +22,7 @@ Accept-language: fr
 ```
 
 
-![img.png](/assets/img/network/study-2-2/img.png)
+![img.png](/assets/img/posts/network/study-2-2/img.png)
 
 HTTP/1.1에서 전형적인 요청 메세지이다.
 첫 줄은 **요청 라인(Request Line)** 이고 이후의 줄들은 **헤더 라인(Header Line)** 이라고 부른다.
