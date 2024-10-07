@@ -4,7 +4,7 @@ title: 네트워크 - HTTPS
 author: milktea
 date: 2024-10-04 08:00:00 +0800
 categories: [Network]
-tags: [HTTP]
+tags: [HTTPS]
 pin: true
 math: true
 mermaid: true
