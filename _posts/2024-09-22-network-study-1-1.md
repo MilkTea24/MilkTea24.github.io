@@ -12,7 +12,7 @@ mermaid: true
 
 # 1. 컴퓨터 네트워크란?
 
-![img.png](/assets/img/network/study-1-1/img.png)
+![img.png](/assets/img/posts/network/study-1-1/img.png)
 
 컴퓨터 네트워크는 통신 및 데이터 교환을 용이하게 하기 위해 함께 연결된 컴퓨터, 서버, 라우터, 스위치 및 기타 네트워킹 장비와 같은 상호 연결된 장치의 모음이다.
 데이터 통신이 필요한 **네트워크의 종단 시스템을 호스트(host)** 라고 하며 호스트 사이의 원활한 통신을 위해 종단 시스템을 연결하는 부분을 **네트워크 코어**라고 한다.
@@ -28,7 +28,7 @@ mermaid: true
 
 ## 회선 교환 네트워크
 
-![img_2.png](/assets/img/network/study-1-1/img_2.png)
+![img_2.png](/assets/img/posts/network/study-1-1/img_2.png)
 
 패킷 전송 방식과 가장 큰 차이는 **호스트 사이 경로 상에 필요한 자원은 통신할 동안에 예약**된다는 점이다.
 하나의 링크에는 여러 개의 회선을 가질 수 있는데 한 회선은 하나의 통신 세션만 사용할 수 있다.
@@ -38,7 +38,7 @@ mermaid: true
 
 ## 패킷 교환 네트워크
 
-![img_1.png](/assets/img/network/study-1-1/img_1.png)
+![img_1.png](/assets/img/posts/network/study-1-1/img_1.png)
 
 전송할 데이터를 **패킷이라는 단위로 분리**하여 전송한다.
 이 때 링크를 회선으로 나누어 독점하는 대신 라우터와 같은 네트워크 장비는 여러 호스트에서 보낸 패킷을  전송한다.

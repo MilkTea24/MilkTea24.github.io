@@ -14,7 +14,7 @@ mermaid: true
 
 ## LAN(Local Area Network)
 
-![img_1.png](/assets/img/network/study-1-3/img_1.png)
+![img_1.png](/assets/img/posts/network/study-1-3/img_1.png)
 
 LAN은 가정, 기업, 캠퍼스 등 특정 개인이나 단체가 보유한 호스트들을 연결하기 위한 네트워크이다.
 LAN은 주로 1계층, 2계층의 디바이스를 사용하여 동일한 네트워크 내 여러 호스트를 식별하고 데이터를 전송한다.
@@ -45,7 +45,7 @@ ISP(Internet Service Provider)가 네트워크를 관리한다.
 
 ### VLAN 도입
 
-![img_2.png](/assets/img/network/study-1-3/img_2.png)
+![img_2.png](/assets/img/posts/network/study-1-3/img_2.png)
 
 이러한 문제를 **VLAN(가상 LAN)** 을 지원하는 스위치를 사용해서 해결할 수 있다.
 VLAN은 하나의 물리적인 LAN을 여러 가상 근거리 네트워크로 분리할 수 있다.
@@ -61,7 +61,7 @@ VLAN은 하나의 물리적인 LAN을 여러 가상 근거리 네트워크로 �
 
 ## 1) NIC
 
-![img.png](/assets/img/network/study-1-3/img.png)
+![img.png](/assets/img/posts/network/study-1-3/img.png)
 
 **NIC(Network Interface Controller)는 링크 계층을 구현**하는 네트워크 어댑터이다.
 
