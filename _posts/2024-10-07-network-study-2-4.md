@@ -1,5 +1,5 @@
 ---
-title: 네트워크 - HTTPS
+title: 네트워크 - DNS
 
 author: milktea
 date: 2024-10-07 07:00:00 +0800
