@@ -27,7 +27,7 @@ HTTP 프로토콜은 이러한 메세지의 구조, 클라이언트와 서버가
 
 # 2. 요청 - 응답 모델
 
-![img.png](/assets/img/network/study-2-1/img.png)
+![img.png](/assets/img/posts/network/study-2-1/img.png)
 
 HTTP는 클라이언트가 HTTP 프로토콜에 맞게 데이터를 요청하면 서버가 이를 바탕으로 적절한 웹 페이지를 반환하는 방식으로 구성되어 있다.
 HTTP 프로토콜에서 데이터를 요청하는 과정은 **웹 브라우저**에 구현되어 있고 웹 브라우저는 받은 웹 페이지를 렌더링하는 역할도 수행한다.
@@ -82,7 +82,7 @@ HTTP/2까지는 TCP를 전송 프로토콜로 사용하여 브라우저와 서�
 
 ### 파이프라이닝(Pipelining)
 
-![img_1.png](/assets/img/network/study-2-1/img_1.png)
+![img_1.png](/assets/img/posts/network/study-2-1/img_1.png)
 
 기존 전송 후 대기 프로토콜은 하나의 데이터를 요청하면 응답이 오기 전까지 다른 데이터를 요청할 수 없어 이용률(utilization)이 낮다.
 하지만 파이프라이닝을 활용하면 이전 요청에 대한 응답을 기다리지 않고 여러 개의 패킷을 전송할 수 있어 이용률이 증가한다.
@@ -134,7 +134,7 @@ HTTP 버전은 지속 연결, 비지속 연결과 큰 관계가 있다.
 
 ## HOL(Head Of Line)
 
-![img_3.png](/assets/img/network/study-2-1/img_3.png)
+![img_3.png](/assets/img/posts/network/study-2-1/img_3.png)
 
 지속 연결 시 HOL 블로킹 문제가 발생할 수 있다.
 파이프라이닝은 **응답이 오기 전에 여러 개의 데이터를 미리 보내는 방식이지만 결국 서버에서는 순차적으로 처리된다.**
@@ -151,7 +151,7 @@ HTTP/1.1에서 HOL을 해결하기 위해 병렬로 TCP 커넥션을 생성하�
 
 ## 3) HTTP/2
 
-![img_4.png](/assets/img/network/study-2-1/img_4.png)
+![img_4.png](/assets/img/posts/network/study-2-1/img_4.png)
 
 HTTP/1.1에서 HOL 문제를 해결하기 위해 병렬 TCP를 도입하였지만 이는 여전히 문제가 있었다.
 HTTP/2는 하나의 TCP 연결을 사용하여 병렬 TCP의 문제점을 해결하면서 **객체를 프레임 단위로 분할**하여 HOL 문제도 함께 해결하였다.

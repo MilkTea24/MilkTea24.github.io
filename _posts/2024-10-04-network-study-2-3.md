@@ -4,7 +4,7 @@ title: 네트워크 - HTTPS
 author: milktea
 date: 2024-10-04 08:00:00 +0800
 categories: [Network]
-tags: [HTTP]
+tags: [HTTPS]
 pin: true
 math: true
 mermaid: true
@@ -92,7 +92,7 @@ TLS는 기존 TCP에 암호화를 적용하여 기밀성, 데이터 무결성, �
 2. 데이터 무결성 X : 공격자가 밥이 입력한 주문 수량을 수정해서 주문했던 기존 수량보다 훨씬 많은 물건을 구매하게 할 수 있다.
 3. 종단점(서버) 인증 X : 공격자가 앨리스사의 사이트를 가장한 피싱 사이트를 만들어 입력한 카드 정보 등을 가로챌 수 있다.
 
-![img.png](/assets/img/network/study-2-3/img.png)
+![img.png](/assets/img/posts/network/study-2-3/img.png)
 
 이러한 TLS는 HTTPS 뿐만 아니라 TCP 상에서 일어나는 어떠한 애플리케이션에서 사용할 수 있다.
 

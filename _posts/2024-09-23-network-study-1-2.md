@@ -40,7 +40,7 @@ Spring 어플리케이션으로 개발을 하다보면 Controller, Service, Repo
 OSI는 7 계층, TCP/IP는 4 계층으로, "컴퓨터 네트워킹 하향식 접근"에서는 5 계층으로 설명하고 있다.
 이 책에서는 TCP/IP의 네트워크 인터페이스 계층을 데이터 링크와 물리 계층으로 구분한다.
 
-![img.png](/assets/img/network/study-1-2/img.png)
+![img.png](/assets/img/posts/network/study-1-2/img.png)
 
 ## OSI 7 계층
 
@@ -74,7 +74,7 @@ OSI 7 계층을 4 계층으로 줄여 더 추상화하고 간략화하였다.
 
 # 3. 캡슐화
 
-![img_1.png](/assets/img/network/study-1-2/img_1.png)
+![img_1.png](/assets/img/posts/network/study-1-2/img_1.png)
 
 위의 이미지에서 네트워크 전송 시 데이터를 하위 계층으로 전달할 때 각 계층은 데이터에 자신의 헤더를 추가하여 전달하는 것을 볼 수 있다.
 이 헤더에는 각각의 계층이 기능을 수행하기 위한 데이터가 포함되어 있다.
