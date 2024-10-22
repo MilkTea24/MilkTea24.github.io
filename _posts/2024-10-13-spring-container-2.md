@@ -51,24 +51,26 @@ protected void finishBeanFactoryInitialization(ConfigurableListableBeanFactory b
 
 DefaultListableBeanFactory는 ConfigurableListableBeanFactory를 구현하는데 DefaultListableBeanFactory의 부모 클래스인 AbstractAutowireCapableBeanFactory까지 이동하면 [doCreateBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java#L554) 메서드를 찾을 수 있다.
 
-1. preInstantitateSingletons가 동일한 클래스의 [preInstantitateSingleton](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1064)을 호출
-2. preInstantitateSingleton이 동일한 클래스의 [instantitateSingleton](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1114)을 호출
-3. instantitateSingleton에서 최종적으로 동일한 클래스의 [getBean(Class<T>, Object...)](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L369)를 호출한다.
+1: preInstantitateSingletons가 동일한 클래스의 [preInstantitateSingleton](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1064)을 호출
+
+2: preInstantitateSingleton이 동일한 클래스의 [instantitateSingleton](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1114)을 호출
+
+3: instantitateSingleton에서 최종적으로 동일한 클래스의 [getBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L369)를 호출한다.
 
 ```java
-	private void instantiateSingleton(String beanName) {
-		//팩토리 빈이면
+private void instantiateSingleton(String beanName) {
+    //팩토리 빈이면
     if (isFactoryBean(beanName)) {
       ...
-		}
+    }
     //팩토리 빈이 아닌 일반적인 빈이면
-		else {
-			getBean(beanName);
-		}
-	}
+    else {
+    	  getBean(beanName);
+    }
+}
 ```
 
-4. getBean(Class<T>, Object ...)에서 동일한 클래스의 [resolveBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L515)을 호출한다.
+4: getBean에서 동일한 클래스의 [resolveBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L515)을 호출한다.
 
 ```java
 public <T> T getBean(Class<T> requiredType, @Nullable Object... args) throws BeansException {
@@ -80,10 +82,13 @@ public <T> T getBean(Class<T> requiredType, @Nullable Object... args) throws Bea
 
 ```
 
-5. resolveBean에서 최종적으로 동일한 클래스의 [resolveNamedBean(String, ResolvableType, Object[])](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1481)을 호출한다.
-6. resolveNamedBean에서 AbstractBeanFactory 클래스의 [getBean(String, Class<T>, Object...)](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java#L221)을 호출한다.
-7. AbstractBeanFactory 클래스의 getBean이 [doGetBean(String, Class<T>, Object, boolean)](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java#L239)을 호출한다.
-8. doGetBean이 최종적으로 AbstractAutowireCapableBeanFactory의 [createBean(String, RootBeanDefinition, Object[])](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java#L486)을 호출한다.
+5: resolveBean에서 최종적으로 동일한 클래스의 [resolveNamedBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java#L1481)을 호출한다.
+
+6: resolveNamedBean에서 AbstractBeanFactory 클래스의 [getBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java#L221)을 호출한다.
+
+7: AbstractBeanFactory 클래스의 getBean이 [doGetBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractBeanFactory.java#L239)을 호출한다.
+
+8: doGetBean이 최종적으로 AbstractAutowireCapableBeanFactory의 [createBean](https://github.com/spring-projects/spring-framework/blob/b3cc9a219e79cd7c99c528229be502f55fa9c97b/spring-beans/src/main/java/org/springframework/beans/factory/support/AbstractAutowireCapableBeanFactory.java#L486)을 호출한다.
 
 ```java
 protected <T> T doGetBean(
@@ -187,7 +192,7 @@ protected <T> T doGetBean(
 ```
 
 
-9. createBean이 doCreateBean(String, RootBeanDefinition, Object[])을 호출한다.
+9: createBean이 doCreateBean(String, RootBeanDefinition, Object[])을 호출한다.
 
 ```java
 protected Object createBean(String beanName, RootBeanDefinition mbd, @Nullable Object[] args)
