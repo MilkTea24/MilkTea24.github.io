@@ -2,8 +2,8 @@
 title: Optimizing Java - 성능 개요
 author: milktea
 date: 2024-10-11 10:00:00 +0800
-categories: [Spring]
-tags: [Container, ApplicationContext]
+categories: [Java]
+tags: [Performance]
 pin: true
 math: true
 mermaid: true
