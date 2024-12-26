@@ -1,7 +1,7 @@
 ---
 title: Optimizing Java - 하드웨어/운영체제
 author: milktea
-date: 2024-12-27 17:00:00 +0800
+date: 2024-12-26 15:00:00 +0800
 categories: [Java]
 tags: [JVM]
 pin: true

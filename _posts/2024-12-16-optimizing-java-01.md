@@ -1,7 +1,7 @@
 ---
 title: Optimizing Java - 성능 개요
 author: milktea
-date: 2024-10-11 10:00:00 +0800
+date: 2024-12-16 10:00:00 +0800
 categories: [Java]
 tags: [Performance]
 pin: true
