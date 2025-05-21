@@ -123,5 +123,40 @@ Collections 클래스와 정적 팩토리 메서드를 이용하면 List의 여�
 인터페이스에 정적 메서드가 허용된 이후 `List.of` 처럼 인터페이스의 정적 메서드로도 List의 하위 타입을 생성할 수도 있지만
 여전히 Collections 또한 많이 쓰인다.
 
-###  
+##  4) 입력 매개변수에 따라 다른 클래스의 객체를 반환
+
+```java
+    public static <E extends Enum<E>> EnumSet<E> noneOf(Class<E> elementType) {
+        Enum<?>[] universe = getUniverse(elementType);
+        if (universe == null)
+            throw new ClassCastException(elementType + " not an enum");
+
+        if (universe.length <= 64)
+            return new RegularEnumSet<>(elementType, universe);
+        else
+            return new JumboEnumSet<>(elementType, universe);
+    }
+```
+
+길이가 64 이하이면 RegularEnumSet, 길이가 64 이상이면 JumboEnumSet을 반환한다
+클라이언트는 이 RegularEnumSet과 JumboEnumSet을 알고 있지 않아도 온전히 활용할 수 있다.
+
+## 5) 정적 팩터리 메서드의 작성 시점에는 반환할 객체의 클래스가 없어도 된다
+
+이 때 클래스가 없어도 된다는 말은 아예 클래스 코드 자체가 없어도 된다는 말이다.
+반환할 객체가 클래스가 아닌 파일로 정의되어 있더라도 정적 팩터리 메서드는 이를 인스턴스로 변환한 후 반환할 수 있다.
+
+### (1) 서비스 제공자 프레임워크
+
+서비스 제공자 프레임워크는 어떤 서비스에 대해 여러 개의 구현이 존재할 수 있고, 
+그 구현들은 디자인 시점에 정해져 있지 않으며, 런타임에 선택해서 사용할 수 있는 아키텍쳐 패턴이다.
+
+- 서비스 인터페이스(Service Interface) : 클라이언트가 사용하는 명세
+- 제공자 등록 API(Provider Registration API) : 인터페이스 구현체를 등록하는 방식
+- 서비스 접근 API(Service Access API) : 구현체를 선택하는 팩토리
+
+
+
+
+
 
